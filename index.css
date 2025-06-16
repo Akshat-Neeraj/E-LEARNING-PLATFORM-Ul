@@ -499,13 +499,14 @@ body {
          
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 1px;
             background-color: #202020;
             color: #ffb347;
+            position: absolute;
             left: 0;
             width: 100%;
             bottom: 0;
-    
+            
         }
         
         /* Responsive Design */
