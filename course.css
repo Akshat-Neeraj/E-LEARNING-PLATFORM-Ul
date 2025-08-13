@@ -3,7 +3,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: var(--dark);
-    overflow: hidden;
+    overflow: visible;
     
 }
 .navbar {
@@ -127,3 +127,4 @@ body {
             bottom: 0;
             
         }
+
