@@ -1,9 +1,9 @@
-
 body {
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: var(--dark);
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: visible;
     
 }
 .navbar {
@@ -123,8 +123,6 @@ body {
             color: #aaaaaa;
             position: absolute;
             left: 0;
+            bottom: -275px;
             width: 100%;
-            bottom: 0;
-            
         }
-
