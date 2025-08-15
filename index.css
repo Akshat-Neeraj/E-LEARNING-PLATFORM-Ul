@@ -24,7 +24,7 @@ body {
             padding: 0;
             gap: 250px;
             position: relative;
-            left: 675px;
+            left: 250px;
         }
 
         .nav-list li a {
@@ -564,3 +564,4 @@ body {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
+
