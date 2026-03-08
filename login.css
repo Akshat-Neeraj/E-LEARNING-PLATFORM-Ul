@@ -1,0 +1,221 @@
+/* General Styles */
+:root {
+    --primary: #4361ee; /* EduHub primary color */
+    --secondary: #3f37c9;
+    --dark: #2b2d42;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --input-bg: #e2e8f0; /* Light input background */
+    --input-text: #322525; /* Dark text for inputs */
+    --border-radius: 8px;
+    --shadow: 0 15px 40px rgba(0,0,0,0.3); /* Softer shadow */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f2f2; /* Light background */
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #f5f2f2;
+}
+
+/* WebKit Scrollbar Styling */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: #f5f2f2;
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 5px;
+    border: 2px solid #f5f2f2;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondary);
+}
+
+.container {
+    background: white; /* White container background */
+    padding: 45px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--primary); /* Primary color for heading */
+    letter-spacing: 1px;
+    font-size: 2.3rem;
+}
+
+.form-group {
+    margin-bottom: 1.8rem;
+    width: 100%;
+    position: relative; /* For positioning the toggle */
+}
+
+label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--gray); /* Gray color for labels */
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+/* Wrapper for input and toggle, to manage positioning */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-wrapper input[type="email"],
+.input-wrapper input[type="password"],
+.input-wrapper input[type="text"] {
+    flex-grow: 1; /* Allow input to take available space */
+    padding: 15px 12px;
+    border: 1px solid #e2e8f0; /* Light border */
+    border-radius: 10px;
+    background: var(--input-bg);
+    color: var(--input-text); /* Dark text in input */
+    font-size: 1rem;
+    transition: outline 0.2s ease, border-color 0.2s ease;
+}
+
+/* ensure email fields leave room for the icon */
+.input-wrapper input[type="email"] {
+    padding-right: 40px;
+}
+
+/* password inputs no longer need extra internal padding - toggle will sit outside */
+/* the previous nth-of-type selectors were brittle and caused unwanted spacing in
+   signup/forgot forms */
+
+.input-wrapper input[type="email"]:focus,
+.input-wrapper input[type="password"]:focus,
+.input-wrapper input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary); /* Primary color for focus border */
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3); /* Primary glow on focus */
+}
+
+.btn {
+    width: 100%;
+    padding: 13px;
+    background: var(--primary); /* Primary button color */
+    color: var(--light); /* Light button text */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    font-size: 0.98rem;
+    flex-wrap: wrap; /* allow links to wrap on narrow screens */
+    gap: 0.5rem;
+}
+
+.links a {
+    color: var(--gray); /* Gray links */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.links a:hover {
+    color: var(--primary);
+}
+
+.toggle-form {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.98rem;
+}
+
+.toggle-form a {
+    color: var(--primary); /* Primary color for links */
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.toggle-form a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.message {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    color: var(--primary); /* Primary color for messages */
+    font-size: 1rem;
+    min-height: 1.5rem;
+}
+
+/* Password Toggle */
+.toggle-password {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--primary); /* Primary color for toggle */
+    text-decoration: none;
+    transition: color 0.2s ease;
+    /* position statically so it sits beside the input instead of overlapping
+       the field or the submit button */
+    position: static;
+    margin-left: 10px;
+} 
+
+.toggle-password:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+/* Email Icon Styling */
+.email-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary);
+    pointer-events: none; /* Prevent icon from interfering with clicks */
+    font-size: 1.1rem;
+}
+
+/* Hide forms initially and make sure every form stacks vertically */
+form[id$="-form"] {
+    display: none;
+    flex-direction: column;
+}
+form[id$="-form"][style*="display:flex"] {
+    display: flex !important;
+    flex-direction: column;
+}
