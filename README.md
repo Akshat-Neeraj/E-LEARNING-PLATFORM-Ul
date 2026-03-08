@@ -1,58 +1,63 @@
-# E-LEARNING-PLATFORM-Ul
+# EduHub - E-Learning Platform UI
 
-*COMPANY*:  CODETECH IT SOLUTIONS
+A modern and responsive E-learning platform UI built with HTML, CSS, and JavaScript. EduHub offers a seamless user experience for browsing courses, managing learning progress, and connecting with instructors.
 
-*NAME*:  AKSHAT NEERAJ
+---
 
-*INTERN ID*:  COD09082
+## Table of Contents
 
-*DOMAIN*:  FRONT-END WEB DEVELOPMENT
-
-*DURATION*:  4 WEEKS
-
-*MENTOR*:  NEELA SANTOSH
-
-I have created a E-Learning Platform in which it mainly have three pages- "Home" which contains the introduction about EduHub, some popular courses of EduHub, some reviews of some students about courses present in EduHub, "Courses" page which contains all the available courses which contains "Watch Now" button with rating of the courses, "About Us" page which contains information of EduHub and a "Contact Us" part in which user can send feedback to the developer of EduHub and in footer side I have use "&copy" to make a copyright sign which represents that this webpage is create in 2025 by EduHub. I have created a login/ sign up page in which a user can login with an email id and password if the user does not have an account then he/she can create it by clicking on the the Sign up link and then user can put his/her email, username and password. And if a user like me who always forgots his/her password then he/she can click on the Forgot Password button and then he/she can recieve the password through email that he/she put on the email. In "Courses" page it have eight courses which are- Front-End Web Development, Data Science with Python, Introduction to Machine Learning, Mobile App Development, Cloud Computing Essentials, DevOps Practices. And when someone wants to learn a course, for example a user wants to learn "Cybersecurity Essentials" then he/she will have to click on "Watch Now" and then it will redirect it to the page of Cybersecurity page in which it contains a youtube video under this it have course curriculam which are the topics that are present in the youtube video and it also have a feature of progress tracking in which I have used "fas fa-circle" to make it like a tick the box thing and it is connected with local storage which can help as a bookmark to the user that user has completed that part and will continue to the next part. And below it a short note about the lecturer or the person who has createed that course is there.
-
-*OUTPUT*
-
-![Image](https://github.com/user-attachments/assets/2c09ea36-4cf9-478c-9ee9-6f4aec213ea9)
+1.  [About the Project](#about-the-project)
+2.  [Key Features](#key-features)
+3.  [Technologies Used](#technologies-used)
 
 
-![Image](https://github.com/user-attachments/assets/6754e9db-69ec-4ae9-9b39-97def79918f3)
+---
 
+## 1. About the Project
 
-![Image](https://github.com/user-attachments/assets/2f0b5555-1682-4341-abd8-ba53d2b02618)
+EduHub is a front-end web application designed to simulate an online learning platform. It provides a visually appealing and user-friendly interface for browsing courses, viewing course details, and managing user authentication. The project focuses on creating a cohesive and modern user experience, utilizing a light color scheme with vibrant accents for key elements.
 
+---
 
-![Image](https://github.com/user-attachments/assets/d108618d-d9ce-488b-9de4-2c458fd5d4dd)
+## 2. Key Features
 
+*   **Modern and Responsive UI:**
+    *   Clean design with a light color scheme (`#f5f2f2`, `#ffffff`, `#4361ee`, `#2b2d42`).
+    *   Sticky navigation bar for easy site-wide access.
+    *   Customizable scrollbars for a unique look and feel.
+    *   Fluid responsiveness across different screen sizes.
+*   **User Authentication Flow:**
+    *   Dedicated pages for Login, Sign Up, and Forgot Password.
+    *   Interactive forms with clear labels, placeholders, and password visibility toggle.
+    *   Simulated authentication and account creation flow.
+*   **Course Discovery:**
+    *   Homepage featuring popular courses with attractive card layouts.
+    *   Dedicated "Courses" page displaying all available courses in a grid.
+    *   Individual course detail pages with embedded videos, curriculum outlines, and instructor information.
+*   **Learning Progress Tracking:**
+    *   Ability to mark lessons as completed in individual course pages.
+    *   Progress is saved using `localStorage`, allowing users to resume where they left off.
+*   **Engaging Elements:**
+    *   Student testimonials to build trust and credibility.
+    *   Interactive hover effects on cards and buttons for a dynamic feel.
+    *   Clear visual hierarchy for headings, text, and interactive elements.
+*   **Footer and Social Links:**
+    *   Comprehensive footer with quick links, support information, subscription form, and social media icons.
 
-![Image](https://github.com/user-attachments/assets/9fd98390-9e74-48ef-8729-9139a01d9f00)
+---
 
+## 3. Technologies Used
 
-![Image](https://github.com/user-attachments/assets/783caf53-08fa-49f7-afce-2ed7186ba218)
-
-
-![Image](https://github.com/user-attachments/assets/293086bc-d467-436a-8319-dc95580f3f77)
-
-
-![Image](https://github.com/user-attachments/assets/030ba3cd-a3a0-48ba-b80d-a94693a3921c)
-
-
-![Image](https://github.com/user-attachments/assets/9f4ac167-a65a-4b38-9f6b-518cd38c3325)
-
-
-![Image](https://github.com/user-attachments/assets/29b313b1-f410-41a5-a0a9-d56f09f043fd)
-
-
-![Image](https://github.com/user-attachments/assets/b44b7be8-e0b5-46ce-a885-42d2925a023d)
-
-
-![Image](https://github.com/user-attachments/assets/57a70458-5aa4-403f-b257-b233988859cd)
-
-
-![Image](https://github.com/user-attachments/assets/837496eb-c54d-499f-8aff-42817121af0e)
-
-
-![Image](https://github.com/user-attachments/assets/4d831dd1-a36b-45e4-a489-16ce526e4cf7)
+*   **HTML5:** For semantic structure and content.
+*   **CSS3:** Styling, layout, theming, and responsiveness:
+    *   CSS Variables for theme management.
+    *   Flexbox and CSS Grid for layout.
+    *   Custom Scrollbar Styling.
+    *   Responsive design media queries.
+*   **Vanilla JavaScript:** For all client-side interactivity:
+    *   Form handling and state management.
+    *   Progress tracking using `localStorage`.
+    *   DOM manipulation for UI updates.
+*   **Font Awesome:** For icons across the application.
+*   **YouTube Embeds:** For showcasing course content.
+*   **Unsplash:** For placeholder course and hero images.
