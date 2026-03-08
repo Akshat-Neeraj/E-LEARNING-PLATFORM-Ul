@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EduHub - Login/Sign Up</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="Logo.png">
+    <script src="https://kit.fontawesome.com/1fb7c3da32.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" id="form-container">
+
+        <form id="login-form" style="display: flex;"> <!-- Login form is shown by default -->
+            <h2>Login</h2>
+            <div class="message" id="login-message"></div>
+
+            <div class="form-group">
+                <label for="login-email">Email</label>
+                <div class="input-wrapper">
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                    <i class="email-icon fas fa-envelope"></i> <!-- Email icon -->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                    <a href="#" class="toggle-password" onclick="togglePassword('login-password'); return false;">Show Password</a>
+                </div>
+            </div>
+
+            <button class="btn" type="submit">Login</button>
+
+            <div class="links">
+                <a href="#" id="show-forgot">Forgot Password?</a>
+                <a href="#" id="show-signup">Don't have an account? Sign Up</a>
+            </div>
+        </form>
+
+        <form id="signup-form">
+            <h2>Sign Up</h2>
+            <div class="message" id="signup-message"></div>
+
+            <div class="form-group">
+                <label for="signup-email">Email</label>
+                <div class="input-wrapper">
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                    <i class="email-icon fas fa-envelope"></i> <!-- Email icon -->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="signup-username">Username</label>
+                <div class="input-wrapper">
+                    <input type="text" id="signup-username" placeholder="Choose a username" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="signup-password" placeholder="Create a password" required>
+                    <a href="#" class="toggle-password" onclick="togglePassword('signup-password'); return false;">Show Password</a>
+                </div>
+            </div>
+
+            <button class="btn" type="submit">Create Account</button>
+
+            <div class="toggle-form">
+                Already have an account? <a id="show-login" href="#">Login</a>
+            </div>
+        </form>
+
+        <!-- Forgot Password Form -->
+        <form id="forgot-form">
+            <h2>Forgot Password</h2>
+            <div class="message" id="forgot-message"></div>
+            <div class="form-group">
+                <label for="forgot-email">Email</label>
+                <div class="input-wrapper">
+                    <input type="email" id="forgot-email" placeholder="Enter your email" required>
+                    <i class="email-icon fas fa-envelope"></i> <!-- Email icon -->
+                </div>
+            </div>
+            <button class="btn" type="submit">Reset Password</button>
+            <div class="toggle-form">
+                Remembered? <a id="show-login2" href="#">Login</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const forgotForm = document.getElementById('forgot-form');
+
+        function hideAllForms() {
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'none';
+            forgotForm.style.display = 'none';
+        }
+
+        document.getElementById('show-signup').onclick = e => { e.preventDefault(); hideAllForms(); signupForm.style.display = 'flex'; };
+        document.getElementById('show-login').onclick = e => { e.preventDefault(); hideAllForms(); loginForm.style.display = 'flex'; };
+        document.getElementById('show-login2').onclick = e => { e.preventDefault(); hideAllForms(); loginForm.style.display = 'flex'; };
+        document.getElementById('show-forgot').onclick = e => { e.preventDefault(); hideAllForms(); forgotForm.style.display = 'flex'; };
+
+        loginForm.onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('login-message').textContent = "Logging in...";
+            setTimeout(function() {
+                document.getElementById('login-message').textContent = "Login successful!";
+                setTimeout(function() { window.location.href = "index.html"; }, 1000);
+            }, 1000);
+        };
+
+        signupForm.onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('signup-message').textContent = "Creating account...";
+            setTimeout(function() {
+                document.getElementById('signup-message').textContent = "Account created successfully!";
+                setTimeout(function() {
+                    hideAllForms();
+                    loginForm.style.display = 'flex';
+                    document.getElementById('login-message').textContent = "Account created. Please log in.";
+                }, 1000);
+            }, 1000);
+        };
+
+        forgotForm.onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('forgot-message').textContent = "Sending password reset link...";
+            setTimeout(function() { document.getElementById('forgot-message').textContent = "Password reset link sent to your email."; }, 1500);
+        };
+
+        function togglePassword(fieldId) {
+            const field = document.getElementById(fieldId);
+            const toggleLink = field.nextElementSibling;
+            if (field.type === "password") {
+                field.type = "text";
+                toggleLink.textContent = "Hide Password";
+            } else {
+                field.type = "password";
+                toggleLink.textContent = "Show Password";
+            }
+        }
+    </script>
+</body>
+</html>

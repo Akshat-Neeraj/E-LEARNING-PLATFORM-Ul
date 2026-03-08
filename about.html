@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us - EduHub</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" href="Logo.png">
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/1fb7c3da32.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Edu<span>Hub</span></a>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="about.html" class="active">About Us</a></li> <!-- Active link -->
+                <li>
+                  <a href="login.html">
+                    <button class="signup-btn">Sign Up</button>
+                  </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1>About EduHub</h1>
+        <p>Welcome to EduHub, your premier destination for online learning! Whether you're here to expand your knowledge, prepare for certifications, or simply explore new subjects, EduHub offers a diverse range of courses taught by industry experts. Our platform is designed to make learning accessible, engaging, and effective for everyone.</p>
+        <p>EduHub is committed to fostering a lifelong learning environment. We believe in empowering individuals with the skills and knowledge needed to succeed in today's rapidly evolving world. Our mission is to provide high-quality educational content that is both practical and inspiring.</p>
+        <p>Join our community of learners and embark on a journey of discovery and growth. We are continuously adding new courses and features to enhance your learning experience.</p>
+
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="https://formspree.io/f/xovwvvjj" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2025 EduHub. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Highlight the active navigation link
+        document.querySelector('a[href="about.html"]').classList.add('active');
+
+        // Basic form submission simulation
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset(); // Clear the form after submission
+        });
+    </script>
+</body>
+</html>

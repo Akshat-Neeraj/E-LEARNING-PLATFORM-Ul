@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - EduHub</title>
+  <link rel="stylesheet" href="course.css">
+  <link rel="icon" href="Logo.png">
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/1fb7c3da32.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Edu<span>Hub</span></a>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html" class="active">Courses</a></li> <!-- Active link -->
+                <li><a href="about.html">About Us</a></li>
+                <li>
+                  <a href="login.html">
+                    <button class="signup-btn">Sign Up</button>
+                  </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header-container" style="padding: 60px 0; text-align: center; border-bottom: 1px solid #e2e8f0;">
+            <h1 style="margin: 0; font-size: 36px; color: var(--dark); letter-spacing: 1px;">Explore Our Courses</h1>
+            <p style="margin: 10px 0 0; color: var(--gray); font-size: 1.1rem;">
+              Find the perfect course to level up your skills and achieve your goals.
+            </p>
+        </div>
+
+        <section class="courses-section" style="padding: 60px 0; background:#f8f9fa;">
+            <div class="courses-grid">
+                <!-- Course Card 1: Web Development -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Web Development">
+                        <span class="category">Development</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Front-End Web Development</h3>
+                        <div class="instructor">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                            <span>Sarah Johnson</span>
+                        </div>
+                        <div class="course-meta">
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                            <span>1200 students</span>
+                        </div>
+                        <a href="coursefweb.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Course Card 2: Data Science -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Data Science">
+                        <span class="category">Data Science</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Data Science Fundamentals</h3>
+                        <div class="instructor">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                            <span>Michael Chen</span>
+                        </div>
+                        <div class="course-meta">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span>1500 students</span>
+                        </div>
+                        <a href="coursedata.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Course Card 3: Mobile App Development -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mobile Development">
+                        <span class="category">Mobile</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Mobile App Development</h3>
+                        <div class="instructor">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Kim">
+                            <span>David Kim</span>
+                        </div>
+                        <div class="course-meta">
+                            <span><i class="fas fa-star"></i> 4.5</span>
+                            <span>1000 students</span>
+                        </div>
+                        <a href="coursemobile.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>What Our Students Say</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"This platform completely transformed my career. I went from zero coding knowledge to landing a developer job in just 6 months!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Sarah">
+                                <div class="author-info">
+                                    <h4>Sarah Williams</h4>
+                                    <p>Web Developer at TechCorp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"The quality of instruction is outstanding. The courses are well-structured and the projects helped me build a strong portfolio."</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="James">
+                                <div class="author-info">
+                                    <h4>James Rodriguez</h4>
+                                    <p>Data Scientist at DataWorld</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2025 EduHub. All rights reserved.
+        </div>
+    </footer>
+  <script>
+    // Highlight the active navigation link
+    document.querySelector('a[href="index.html"]').classList.add('active');
+
+    // Smooth scrolling for anchor links (if any were present)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+  </script>
+</body>
+</html>

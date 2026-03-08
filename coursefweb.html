@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Development Bootcamp | EduHub</title>
+    <link rel="stylesheet" href="course.css"> <!-- Link to the common course CSS -->
+    <link rel="icon" href="Logo.png">
+    <script src="https://kit.fontawesome.com/1fb7c3da32.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Edu<span>Hub</span></a>
+                <div>
+                    <a href="course.html" class="btn btn-outline">Back to Courses</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="course-detail">
+        <div class="container">
+            <div class="course-header">
+                <h1>Complete Web Development Bootcamp</h1>
+                <p>Master HTML, CSS, JavaScript, React, Node.js and build real projects</p>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ZxKM3DCV2kE?si=oMOFQgzlhVzYE75_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+
+            <div class="course-curriculum">
+                <h2>Course Curriculum</h2>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3>Module 1: Getting Started & Setup</h3>
+                        <span>2 Lessons • 13m</span>
+                    </div>
+                    <div class="lesson">
+                        <span><i class="fas fa-circle"></i> Course Overview & Tools</span>
+                        <span>03:00</span>
+                    </div>
+                    <div class="lesson">
+                        <span><i class="fas fa-circle"></i> Setting Up Your Environment</span>
+                        <span>10:00</span>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3>Module 2: HTML Basics</h3>
+                        <span>2 Lessons • 6m</span>
+                    </div>
+                    <div class="lesson">
+                        <span><i class="fas fa-circle"></i> HTML Structure & Boilerplate</span>
+                        <span>03:00</span>
+                    </div>
+                    <div class="lesson">
+                        <span><i class="fas fa-circle"></i> Common HTML Elements</span>
+                        <span>03:00</span>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3>Module 3: CSS Fundamentals</h3>
+                        <span>2 Lessons • 6m</span>
+                    </div>
+                    <div class="lesson">
+                        <span><i class="fas fa-circle"></i> Adding CSS to HTML</span>
+                        <span>03:00</span>
+                    </div>
+                    <div class="lesson">
+                        <span><i class="fas fa-circle"></i> Styling Text & Layout</span>
+                        <span>03:00</span>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3>Module 4: JavaScript Introduction</h3>
+                        <span>2 Lessons • 6m</span>
+                    </div>
+                    <div class="lesson">
+                        <span><i class="fas fa-circle"></i> Linking JavaScript</span>
+                        <span>03:00</span>
+                    </div>
+                    <div class="lesson">
+                        <span><i class="fas fa-circle"></i> Basic Interactivity</span>
+                        <span>03:00</span>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3>Module 5: Building a Simple Website</h3>
+                        <span>2 Lessons • 6m</span>
+                    </div>
+                    <div class="lesson">
+                        <span><i class="fas fa-circle"></i> Project Walkthrough</span>
+                        <span>03:00</span>
+                    </div>
+                    <div class="lesson">
+                        <span><i class="fas fa-circle"></i> Final Touches & Deployment</span>
+                        <span>03:00</span>
+                    </div>
+                </div>
+            </div>
+
+     <div class="instructor-section">
+                <h2>About the Instructor</h2>
+                <div class="instructor-card">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="instructor-img">
+                    <div>
+                        <h3>Sarah Johnson</h3>
+                        <p>Senior Web Developer at TechCorp</p>
+                        <p>With over 10 years of experience in web development, Sarah has worked with companies like Google and Microsoft. She specializes in front-end frameworks and loves teaching beginners how to code.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2025 EduHub. All rights reserved.
+        </div>
+    </footer>
+  <script>
+  // Progress tracking functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const lessons = document.querySelectorAll('.lesson');
+    
+    // Load progress from localStorage
+    const completedLessons = JSON.parse(localStorage.getItem('completedLessons')) || [];
+
+    lessons.forEach((lesson, index) => {
+      // Mark lessons as completed if they are in localStorage
+      if (completedLessons.includes(index)) {
+        lesson.classList.add('completed');
+        const icon = lesson.querySelector('i');
+        if (icon) {
+          icon.className = 'fas fa-check-circle';
+          icon.style.color = 'var(--primary)';
+        }
+      }
+
+      // Add click event to toggle completion
+      lesson.addEventListener('click', () => {
+        if (lesson.classList.contains('locked')) return; // do nothing if locked
+
+        if (lesson.classList.contains('completed')) {
+          lesson.classList.remove('completed');
+          const icon = lesson.querySelector('i');
+          if (icon) {
+            icon.className = 'fas fa-circle';
+            icon.style.color = '';
+          }
+          const indexToRemove = completedLessons.indexOf(index);
+          if (indexToRemove > -1) completedLessons.splice(indexToRemove, 1);
+        } else {
+          lesson.classList.add('completed');
+          const icon = lesson.querySelector('i');
+          if (icon) {
+            icon.className = 'fas fa-check-circle';
+            icon.style.color = 'var(--primary)';
+          }
+          completedLessons.push(index);
+        }
+        // Save progress to localStorage
+        localStorage.setItem('completedLessons', JSON.stringify(completedLessons));
+      });
+    });
+  });
+</script>
+</body>
+</html>
